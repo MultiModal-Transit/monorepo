@@ -1,3 +1,30 @@
+load("@pip_deps//:requirements.bzl", "requirement")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
 exports_files([
     "requirements.in",
 ])
+
+py_library(
+    name = "app",
+    srcs = glob(
+        ["app/**/*.py"],
+        exclude = [
+            "*.pyc",
+            "__pycache__",
+        ],
+    ),
+    deps = [
+        requirement("flask"),
+    ],
+)
+
+py_binary(
+    name = "api",
+    srcs = [
+        "api.py",
+    ],
+    deps = [
+        ":app",
+    ],
+)

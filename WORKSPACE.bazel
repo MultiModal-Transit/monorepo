@@ -10,12 +10,12 @@ http_archive(
 load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 
 python_register_toolchains(
-    name = "python3_10_4",
+    name = "python",
     # Available versions are listed in @rules_python//python:versions.bzl.
     python_version = "3.10.4",
 )
 
-load("@python3_10_4//:defs.bzl", "interpreter")
+load("@python//:defs.bzl", "interpreter")
 load("@rules_python//python:pip.bzl", "pip_parse")
 
 pip_parse(
