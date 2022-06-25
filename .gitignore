@@ -1,0 +1,10 @@
+# VS Code
+.vscode
+
+# Python
+.venv*
+**/__pycache__
+*.pyc
+
+# Bazel
+bazel-*

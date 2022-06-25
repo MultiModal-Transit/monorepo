@@ -1,0 +1,10 @@
+load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+# load("@python3_10_4//:defs.bzl", "interpreter")
+
+compile_pip_requirements(
+    name = "requirements",
+    data = ["//api:requirements.in"],
+    requirements_in = "requirements.in",
+    requirements_txt = "requirements.txt",
+    visibility = ["//visibility:public"],
+)
