@@ -1,0 +1,9 @@
+# Requirements file for all external Python packages.
+# Specify packages here (forward pinning when possible)
+# and compile them to a new lock file  using the command:
+#
+#   bazel run //third_party:requirements.update
+#
+
+# api
+flask>=2.1.2
