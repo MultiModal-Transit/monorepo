@@ -1,7 +1,7 @@
-name: test
+name: tests
 on: push
 jobs:
-  test-and-deploy:
+  bazel:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
